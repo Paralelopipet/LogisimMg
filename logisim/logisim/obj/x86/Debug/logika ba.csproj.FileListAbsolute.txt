@@ -1,0 +1,7 @@
+C:\Users\14b06\AppData\Local\Temporary Projects\logika ba\obj\x86\Debug\logika_ba.Properties.Resources.resources
+C:\Users\14b06\AppData\Local\Temporary Projects\logika ba\obj\x86\Debug\logika ba.csproj.GenerateResource.Cache
+C:\Users\14b06\AppData\Local\Temporary Projects\logika ba\obj\x86\Debug\Logika_ba.Form1.resources
+C:\Users\14b06\AppData\Local\Temporary Projects\logika ba\bin\Debug\logika ba.exe
+C:\Users\14b06\AppData\Local\Temporary Projects\logika ba\bin\Debug\logika ba.pdb
+C:\Users\14b06\AppData\Local\Temporary Projects\logika ba\obj\x86\Debug\logika ba.exe
+C:\Users\14b06\AppData\Local\Temporary Projects\logika ba\obj\x86\Debug\logika ba.pdb
