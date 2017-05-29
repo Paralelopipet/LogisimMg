@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace Logika_ba
 {
+    //komponenta crni = new komponenta(10, 2.5, black);
+    
     public abstract class Komponenta
     {
         protected int x, y;
@@ -72,7 +74,10 @@ namespace Logika_ba
         }
         public void PromeniBoju()
         {
-            c = Color.Green;
+            if (c == Color.Blue)
+                c = Color.Green;
+            else
+                c = Color.Blue;
         }
         public override bool Is_Clicked(int clickedx, int clickedy, int CellSize)
         {
@@ -265,6 +270,71 @@ namespace Logika_ba
             Promeni_Poziciju(clickedx, clickedy, pomx, pomy);
             this.x = clickedx;
             this.y = clickedy;
+        }
+    }
+
+    public class Zica : Komponenta
+    {
+        Color c = Color.Blue;
+        public int Stanje = 0;
+        public Zica levo,desno,gore,dole;
+        public bool krst;
+        public int vrednost = 0;
+        public Zica(int x, int y)
+            : base(x, y)
+        {
+            vrednost = -1;
+        }
+
+        public override bool Vrednost
+        {
+            get;
+
+        }
+
+        public void PromeniVrednost(int a,string smer)
+        {
+            vrednost = a;
+            
+            if (levo != null&&smer!="levo") levo.PromeniVrednost(a,"desno");
+            if (desno != null && smer != "desno") desno.PromeniVrednost(a, "levo");
+            if (gore != null && smer != "gore") gore.PromeniVrednost(a, "dole");
+            if (dole != null && smer != "dole") dole.PromeniVrednost(a, "gore");
+        }
+      
+        public static void Normalizuj(int CellSize, ref int x, ref int y)
+        {
+            x += CellSize / 2; y += CellSize / 2;
+            x = x - x % CellSize + (x % CellSize) / (CellSize / 2) * CellSize - (CellSize / 2);
+            y = y - y % CellSize + (y % CellSize) / (CellSize / 2) * CellSize - (CellSize / 2);
+        }
+        public override void Nacrtaj(Graphics g)
+        {
+            PromeniBoju(); 
+            g.FillEllipse(new SolidBrush(c), x - CellSize / 4, y - CellSize / 4, CellSize / 2, CellSize / 2);
+        }
+        public void PromeniBoju()
+        {
+            if (vrednost == 1) c = Color.Green;
+            if (vrednost == 0) c = Color.Blue;
+            if (vrednost == -1) c = Color.Black;
+            if (vrednost == 2) c = Color.Red;
+        }
+        public override bool Is_Clicked(int clickedx, int clickedy, int CellSize)
+        {
+            Lampica.Normalizuj(CellSize, ref clickedx, ref clickedy);
+            if ((clickedx == this.x) && (clickedy == this.y))  return true; 
+            else return false;
+        }
+        public override void Promeni_Poziciju(int clickedx, int clickedy, int pomx, int pomy)
+        {
+            Lampica.Normalizuj(CellSize, ref clickedx, ref clickedy);
+            this.x = clickedx;
+            this.y = clickedy;
+        }
+        public override void Privremena_Pozicija(int clickedx, int clickedy, int pomx, int pomy)
+        {
+            Promeni_Poziciju(clickedx, clickedy, pomx, pomy);
         }
     }
 }

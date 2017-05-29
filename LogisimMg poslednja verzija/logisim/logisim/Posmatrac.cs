@@ -10,6 +10,7 @@ namespace Logika_ba
         static Komponenta tren;
         static int pomx;
         static int pomy;
+        public static bool dodavanje;
         public static Komponenta Tren
         {
             get

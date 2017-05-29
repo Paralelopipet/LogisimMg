@@ -12,7 +12,9 @@ namespace Logika_ba
 {
     public partial class Form1 : Form
     {
+        
         int cellSize = 20;
+        int pocx, pocy;
         class Tacka
         {
             int x;
@@ -85,6 +87,7 @@ namespace Logika_ba
         Ili k;
         private void Form1_Load(object sender, EventArgs e)
         {
+            InitializeTreeView();
             Komponenta lampica = new Lampica(10, 10);
             k = new Ili(60, 60);
             k.Dodaj(lampica, 1);
@@ -130,19 +133,19 @@ namespace Logika_ba
 
         private void Ipic_Click(object sender, EventArgs e)
         {
-            Alatka.Al = AlatkaI.getAlatka();
-            label1.Text = "I alatka";
+            //Alatka.Al = AlatkaI.getAlatka();
+            //label1.Text = "I alatka";
         }
 
         private void Ilipic_Click(object sender, EventArgs e)
         {
-            Alatka.Al = AlatkaIli.getAlatka();
-            label1.Text = "Ili alatka";
+            //Alatka.Al = AlatkaIli.getAlatka();
+            //label1.Text = "Ili alatka";
         }
         private void lanpic_Click(object sender, EventArgs e)
         {
-            Alatka.Al = AlatkaLampica.getAlatka();
-            label1.Text = "Lampica alatka";
+            //Alatka.Al = AlatkaLampica.getAlatka();
+            //label1.Text = "Lampica alatka";
         }
 
 
@@ -153,8 +156,72 @@ namespace Logika_ba
             {
                 if (Alatka.Al != null)
                 {
-                    komponente.Add(Alatka.Al.NapraviObjekat(e.X, e.Y, cellSize));
-                    listBox1.Items.Add(Alatka.Al.Text());
+                    if (Alatka.Al.Text() != "Dodat Cvor")
+                    {
+                        komponente.Add(Alatka.Al.NapraviObjekat(e.X, e.Y, cellSize));
+                        listBox1.Items.Add(Alatka.Al.Text());
+                    }
+                    else
+                    {
+                        Zica nova=null, stara=null;
+
+                        while (e.X >= pocx + cellSize / 2)
+                        {
+                            listBox1.Items.Add(Alatka.Al.Text());
+                            nova = (Zica)Alatka.Al.NapraviObjekat(pocx, pocy, cellSize);
+                            komponente.Add(nova);
+                            if (stara != null)
+                            {
+                                nova.levo = stara;
+                                stara.desno = nova;
+                            }
+                            stara = nova;
+                            pocx += cellSize;
+                        }
+
+                        while (e.X <= pocx - cellSize / 2)
+                        {
+                            listBox1.Items.Add(Alatka.Al.Text());
+                            nova = (Zica)Alatka.Al.NapraviObjekat(pocx, pocy, cellSize);
+                            komponente.Add(nova);
+                            if (stara != null)
+                            {
+                                nova.desno = stara;
+                                stara.levo = nova;
+                            }
+                            stara = nova;
+                            pocx -= cellSize;
+                        }
+
+                        while (e.Y >= pocy + cellSize / 2)
+                        {
+                            listBox1.Items.Add(Alatka.Al.Text());
+                            nova = (Zica)Alatka.Al.NapraviObjekat(pocx, pocy, cellSize);
+                            komponente.Add(nova);
+                            if (stara != null)
+                            {
+                                nova.gore = stara;
+                                stara.dole = nova;
+                            }
+                            stara = nova;
+                            pocy += cellSize;
+                            
+                        }
+                        while (e.Y <= pocy - cellSize / 2)
+                        {
+                            listBox1.Items.Add(Alatka.Al.Text());
+                            nova = (Zica)Alatka.Al.NapraviObjekat(pocx, pocy, cellSize);
+                            komponente.Add(nova);
+                            if (stara != null)
+                            {
+                                nova.dole = stara;
+                                stara.gore = nova;
+                            }
+                            stara = nova;
+                            pocy -= cellSize;
+                            
+                        }
+                    }
                     
                 }
             }
@@ -181,14 +248,42 @@ namespace Logika_ba
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
+            Trenutna_komponenta.dodavanje = true;
             foreach (Komponenta k in komponente)
             {
                 if (k.Is_Clicked(e.X,e.Y,cellSize) == true)
                 {
+                    Trenutna_komponenta.dodavanje = false;
                     Trenutna_komponenta.Tren = k;
-                    Trenutna_komponenta.Pomx = e.X;
-                    Trenutna_komponenta.Pomy = e.Y;
+                    //if (Alatka.Al.Text()=="Ruka")
+                    //{
+                        Trenutna_komponenta.Pomx = e.X;
+                        Trenutna_komponenta.Pomy = e.Y;
+                    //}
+                    /*if (Alatka.Al.Text() == "Pali")
+                    {
+                        Zica m = (Zica)k;
+                        if(m.vrednost==-1|| m.vrednost == 0)
+                        {
+                            m.PromeniVrednost(1, "");
+                        }
+                        else
+                        {
+                            m.PromeniVrednost(0, "");
+                        }
+                        
+                        Trenutna_komponenta.Pomx = e.X;
+                        Trenutna_komponenta.Pomy = e.Y;
+                    }*/
+
                 }
+            }
+            if(Trenutna_komponenta.dodavanje = true&&Alatka.Al.Text()== "Dodat Cvor")
+            {
+                pocx = e.X;
+                pocy = e.Y;
+                //komponente.Add(Alatka.Al.NapraviObjekat(e.X, e.Y, cellSize));
+                //listBox1.Items.Add(Alatka.Al.Text());
             }
         }
 
@@ -207,16 +302,79 @@ namespace Logika_ba
             }
 
         }
-    
-      /* MOOOORAAAAAAAAAMMMMMMMMMMMMM*/
-    
-        
 
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
-        
+        }
 
-        
+        private void InitializeTreeView()
+        {
+            treeView1.BeginUpdate();
+            treeView1.Nodes.Add("Kola");
+            treeView1.Nodes.Add("Zica");
+            treeView1.Nodes.Add("Ruka");
+            treeView1.Nodes.Add("Pali");
+            treeView1.Nodes[0].Nodes.Add("Pokazivaci");
+            treeView1.Nodes[0].Nodes.Add("Kola");
+            treeView1.Nodes[0].Nodes[0].Nodes.Add("LED");
+            treeView1.Nodes[0].Nodes[1].Nodes.Add("I");
+            treeView1.Nodes[0].Nodes[1].Nodes.Add("Ili");
+            //treeView1.Nodes[0].Nodes[1].Nodes[0]
+            treeView1.EndUpdate();
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if(treeView1.SelectedNode.Text=="LED")
+            {
+                Alatka.Al = AlatkaLampica.getAlatka();
+                label1.Text = "Lampica alatka";
+            }
+
+            if (treeView1.SelectedNode.Text == "Ili")
+            {
+                Alatka.Al = AlatkaIli.getAlatka();
+                label1.Text = "Ili alatka";
+            }
+
+            if (treeView1.SelectedNode.Text == "I")
+            {
+                Alatka.Al = AlatkaI.getAlatka();
+                label1.Text = "I alatka";
+            }
+
+            if (treeView1.SelectedNode.Text == "Zica")
+            {
+                Alatka.Al = AlatkaZica.getAlatka();
+                label1.Text = "Zica alatka";
+            }
+
+            if (treeView1.SelectedNode.Text == "Ruka")
+            {
+                Alatka.Al = AlatkaRuka.getAlatka();
+                label1.Text = "Ruka";
+            }
+
+            if (treeView1.SelectedNode.Text == "Pali")
+            {
+                Alatka.Al = AlatkaPali.getAlatka();
+                label1.Text = "Pali";
+            }
+
+
+        }
+
+
+        /* MOOOORAAAAAAAAAMMMMMMMMMMMMM*/
+
+
+
+
+
+
+
+
 
 
 
