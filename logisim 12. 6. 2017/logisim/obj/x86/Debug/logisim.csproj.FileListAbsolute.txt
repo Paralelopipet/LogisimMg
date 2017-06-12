@@ -1,0 +1,58 @@
+Z:\LogisimMg-master\logisim\logisim\bin\Debug\logisim.exe
+Z:\LogisimMg-master\logisim\logisim\bin\Debug\logisim.pdb
+Z:\LogisimMg-master\logisim\logisim\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\LogisimMg-master\logisim\logisim\obj\x86\Debug\Logika_ba.Form1.resources
+Z:\LogisimMg-master\logisim\logisim\obj\x86\Debug\logika_ba.Properties.Resources.resources
+Z:\LogisimMg-master\logisim\logisim\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\LogisimMg-master\logisim\logisim\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\LogisimMg-master\logisim\logisim\obj\x86\Debug\logisim.exe
+Z:\LogisimMg-master\logisim\logisim\obj\x86\Debug\logisim.pdb
+C:\Users\Damjan\Desktop\LogisimMg-master\logisim\logisim\obj\x86\Debug\logisim.exe
+C:\Users\Damjan\Desktop\LogisimMg-master\logisim\logisim\obj\x86\Debug\logisim.pdb
+C:\Users\Damjan\Desktop\LogisimMg-master\logisim\logisim\bin\Debug\logisim.exe
+C:\Users\Damjan\Desktop\LogisimMg-master\logisim\logisim\bin\Debug\logisim.pdb
+C:\Users\Damjan\Desktop\LogisimMg-master\logisim\logisim\obj\x86\Debug\logisim.csprojResolveAssemblyReference.cache
+C:\Users\Damjan\Desktop\LogisimMg-master\logisim\logisim\obj\x86\Debug\Logika_ba.Form1.resources
+C:\Users\Damjan\Desktop\LogisimMg-master\logisim\logisim\obj\x86\Debug\logika_ba.Properties.Resources.resources
+C:\Users\Damjan\Desktop\LogisimMg-master\logisim\logisim\obj\x86\Debug\logisim.csproj.GenerateResource.Cache
+C:\Users\14b06\Desktop\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\logisim.exe
+C:\Users\14b06\Desktop\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\logisim.pdb
+C:\Users\14b06\Desktop\LogisimMg poslednja verzija\logisim\logisim\bin\Debug\logisim.exe
+C:\Users\14b06\Desktop\LogisimMg poslednja verzija\logisim\logisim\bin\Debug\logisim.pdb
+C:\Users\14b06\Desktop\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\logisim.csprojResolveAssemblyReference.cache
+C:\Users\14b06\Desktop\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\Logika_ba.Form1.resources
+C:\Users\14b06\Desktop\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\logika_ba.Properties.Resources.resources
+C:\Users\14b06\Desktop\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\logisim.csproj.GenerateResource.Cache
+Z:\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\logisim.exe
+Z:\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\logisim.pdb
+Z:\LogisimMg poslednja verzija\logisim\logisim\bin\Debug\logisim.exe
+Z:\LogisimMg poslednja verzija\logisim\logisim\bin\Debug\logisim.pdb
+Z:\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\Logika_ba.Form1.resources
+Z:\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\logika_ba.Properties.Resources.resources
+Z:\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\LogisimMg poslednja verzija\logisim\logisim\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\Logisim Maric aproved\logisim\logisim\obj\x86\Debug\logisim.exe
+Z:\Logisim Maric aproved\logisim\logisim\obj\x86\Debug\logisim.pdb
+Z:\Logisim Maric aproved\logisim\logisim\bin\Debug\logisim.exe
+Z:\Logisim Maric aproved\logisim\logisim\bin\Debug\logisim.pdb
+Z:\Logisim Maric aproved\logisim\logisim\obj\x86\Debug\Logika_ba.Form1.resources
+Z:\Logisim Maric aproved\logisim\logisim\obj\x86\Debug\logika_ba.Properties.Resources.resources
+Z:\Logisim Maric aproved\logisim\logisim\obj\x86\Debug\logisim.csprojResolveAssemblyReference.cache
+Z:\Logisim Maric aproved\logisim\logisim\obj\x86\Debug\logisim.csproj.GenerateResource.Cache
+C:\Users\Damjan\Desktop\logisim\obj\x86\Debug\logisim.exe
+C:\Users\Damjan\Desktop\logisim\obj\x86\Debug\logisim.pdb
+C:\Users\Damjan\Desktop\logisim\bin\Debug\logisim.exe
+C:\Users\Damjan\Desktop\logisim\bin\Debug\logisim.pdb
+C:\Users\Damjan\Desktop\logisim\obj\x86\Debug\logisim.csprojResolveAssemblyReference.cache
+C:\Users\Damjan\Desktop\logisim\obj\x86\Debug\Logika_ba.Form1.resources
+C:\Users\Damjan\Desktop\logisim\obj\x86\Debug\logika_ba.Properties.Resources.resources
+C:\Users\Damjan\Desktop\logisim\obj\x86\Debug\logisim.csproj.GenerateResource.Cache
+C:\Users\mihai\Downloads\logisim 12. 6. 2017\logisim\obj\x86\Debug\logisim.csprojResolveAssemblyReference.cache
+C:\Users\mihai\Downloads\logisim 12. 6. 2017\logisim\obj\x86\Debug\Logika_ba.Form1.resources
+C:\Users\mihai\Downloads\logisim 12. 6. 2017\logisim\obj\x86\Debug\logika_ba.Properties.Resources.resources
+C:\Users\mihai\Downloads\logisim 12. 6. 2017\logisim\obj\x86\Debug\logisim.csproj.GenerateResource.Cache
+C:\Users\mihai\Downloads\logisim 12. 6. 2017\logisim\obj\x86\Debug\logisim.exe
+C:\Users\mihai\Downloads\logisim 12. 6. 2017\logisim\obj\x86\Debug\logisim.pdb
+C:\Users\mihai\Downloads\logisim 12. 6. 2017\logisim\bin\Debug\logisim.exe
+C:\Users\mihai\Downloads\logisim 12. 6. 2017\logisim\bin\Debug\logisim.pdb
